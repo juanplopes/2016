@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Project Euler &#35;1</title>
+    
+    <meta name="author" content="Juan Lopes">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/pygments.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">This is 2016, not 2012.</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+          <a class="license" rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" /></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Project Euler &#35;1 <small>não é tão fácil</small></h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>O <a href='http://projecteuler.net/'>Project Euler</a> ganhou muita importância ultimamente. É possível encontrar centenas (se não milhares) de posts em blogs e repositórios do github com soluções.</p>
+
+<p>Aparentemente o problema mais famoso é o <a href='http://projecteuler.net/problem=1'>primeiro</a>, que pede a soma de todos os números divisíveis por 3 ou 5 menores que 1000. Uma solução simples (e eficaz) em python pareceria com:</p>
+<div class='highlight'><pre><code class='python'><span class='k'>def</span> <span class='nf'>euler1</span><span class='p'>(</span><span class='n'>limit</span><span class='p'>):</span>
+    <span class='n'>answer</span><span class='o'>=</span><span class='mi'>0</span>
+    <span class='k'>for</span> <span class='n'>i</span> <span class='ow'>in</span> <span class='nb'>range</span><span class='p'>(</span><span class='n'>limit</span><span class='p'>):</span>
+        <span class='k'>if</span> <span class='n'>i</span><span class='o'>%</span><span class='mi'>3</span><span class='o'>==</span><span class='mi'>0</span> <span class='ow'>or</span> <span class='n'>i</span><span class='o'>%</span><span class='mi'>5</span><span class='o'>==</span><span class='mi'>0</span><span class='p'>:</span>
+            <span class='n'>answer</span><span class='o'>+=</span><span class='n'>i</span>
+    <span class='k'>return</span> <span class='n'>answer</span>
+
+<span class='k'>print</span> <span class='n'>euler1</span><span class='p'>(</span><span class='mi'>1000</span><span class='p'>)</span>
+</code></pre>
+</div>
+<p>Essa é uma solução válida para esse problema. Funciona muito bem até 1000. O problema é que ela não escala tão bem. Executar <code>euler1(1000000000)</code> demoraria tempo suficiente para desistir. Como resolver, então?</p>
+
+<p>Seguem alguns casos de teste com valores esperados:</p>
+
+<p><code>
+assert euler1(1000) == 233168
+assert euler1(1234) == 354858
+assert euler1(1000000000) == 233333333166666668
+assert euler1(123456789123456789) == 3556368382157191567225525788624704
+</code></p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '2016not2012'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>07 May 2012</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#project-euler-ref">project-euler <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#algebra-ref">algebra <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#math-ref">math <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Juan Lopes 2012</p>
+        <p>
+            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+        </p>
+        <p>
+          Powered by <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
+
