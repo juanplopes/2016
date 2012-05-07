@@ -31,10 +31,10 @@ tão bem. Executar ```euler1(1000000000)``` demoraria tempo suficiente para desi
 
 Seguem alguns casos de teste com valores esperados:
 
-```
+{% highlight python %}
 assert euler1(1000) == 233168
 assert euler1(1234) == 354858
 assert euler1(1000000000) == 233333333166666668
 assert euler1(123456789123456789) == 3556368382157191567225525788624704
-```
+{% endhighlight %}
 
