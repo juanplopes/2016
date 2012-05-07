@@ -3,7 +3,7 @@ layout: post
 category: math
 tags: [project-euler, algebra, math]
 tagline: não é tão fácil
-title: Project Euler &#35;1 (revisited)
+title: Project Euler &#35;1 (revisado)
 ---
 {% include JB/setup %}
 

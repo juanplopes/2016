@@ -4,7 +4,7 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-07T18:22:42-03:00</updated>
+ <updated>2012-05-07T18:22:58-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
@@ -13,7 +13,7 @@
 
  
  <entry>
-   <title>Project Euler &#35;1 (revisited)</title>
+   <title>Project Euler &#35;1 (revisado)</title>
    <link href="http://juanlopes.net/2016/project-euler-1"/>
    <updated>2012-05-07T00:00:00-03:00</updated>
    <id>http://juanlopes.net/2016/project-euler-1</id>
