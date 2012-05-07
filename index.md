@@ -13,8 +13,8 @@ coisas insuportáveis da computação.
 
 ### O que não é?
 
-* Um blog
-* Em inglês
+* um blog
+* (totalmente) em inglês
 
 ### Desafios
 
