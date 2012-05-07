@@ -1,24 +1,22 @@
 ---
 layout: page
 title: 2016?
-tagline: O que tem 2016?
+tagline: O que é?
 ---
 {% include JB/setup %}
 
-## O que é?
-
-Isso é um experimento baseado nesse [post do Dan Shipper](http://danshipper.com/124690091).
+Esse site é um experimento baseado no [post do Dan Shipper](http://danshipper.com/124690091).
 
 O objetivo é postar desafios de programação com **impecável irregularidade**, cuja 
 solução envolva alguma disciplina clássica de algoritmos, matemática e outras 
 coisas insuportáveis da computação.
 
-## O que não é?
+### O que não é?
 
 * Um blog
 * Em inglês
 
-## Desafios
+### Desafios
 
 <ul class="posts">
   {% for post in site.posts %}
