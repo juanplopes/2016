@@ -26,10 +26,15 @@ def euler1(limit):
 print euler1(1000)
 {% endhighlight %}
 
-Essa é uma solução válida para esse problema. Funciona muito bem até 1000. O problema é que ela não escala
-tão bem. Executar ```euler1(1000000000)``` demoraria tempo suficiente para desistir. Como resolver, então?
+Essa é uma solução válida para esse problema. Funciona muito bem até 1000. O 
+problema é que ela não escala tão bem. Executar ```euler1(1000000000)``` 
+demoraria tempo suficiente para desistir. 
 
-Seguem alguns casos de teste com valores esperados:
+Esse é o problema. Desenvolva uma solução que rode em tempo satisfatório para 
+valores bem maiores que 1000. Não há limite esperado. Qual o máximo que a sua
+solução resolveria em, digamos, menos de 1 minuto?
+
+Seguem alguns casos de teste com alguns valores grandes:
 
 {% highlight python %}
 assert euler1(1000) == 233168

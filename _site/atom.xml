@@ -4,7 +4,7 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-07T18:27:56-03:00</updated>
+ <updated>2012-05-07T18:30:34-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
@@ -30,9 +30,11 @@
 &lt;span class='k'&gt;print&lt;/span&gt; &lt;span class='n'&gt;euler1&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;1000&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;Essa é uma solução válida para esse problema. Funciona muito bem até 1000. O problema é que ela não escala tão bem. Executar &lt;code&gt;euler1(1000000000)&lt;/code&gt; demoraria tempo suficiente para desistir. Como resolver, então?&lt;/p&gt;
+&lt;p&gt;Essa é uma solução válida para esse problema. Funciona muito bem até 1000. O problema é que ela não escala tão bem. Executar &lt;code&gt;euler1(1000000000)&lt;/code&gt; demoraria tempo suficiente para desistir.&lt;/p&gt;
 
-&lt;p&gt;Seguem alguns casos de teste com valores esperados:&lt;/p&gt;
+&lt;p&gt;Esse é o problema. Desenvolva uma solução que rode em tempo satisfatório para valores bem maiores que 1000. Não há limite esperado. Qual o máximo que a sua solução resolveria em, digamos, menos de 1 minuto?&lt;/p&gt;
+
+&lt;p&gt;Seguem alguns casos de teste com alguns valores grandes:&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;euler1&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;1000&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mi'&gt;233168&lt;/span&gt;
 &lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;euler1&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;1234&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mi'&gt;354858&lt;/span&gt;
 &lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;euler1&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;1000000000&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mi'&gt;233333333166666668&lt;/span&gt;
