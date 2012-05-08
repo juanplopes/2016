@@ -8,9 +8,9 @@ title: Project Euler &#35;1 (revisado)
 ---
 {% include JB/setup %}
 
-O [Project Euler](http://projecteuler.net/) ganhou muita importância ultimamente.
-É possível encontrar centenas (se não milhares) de posts em blogs e repositórios
-do github com soluções.
+Em 2016 o [Project Euler](http://projecteuler.net/) ganhou muita importância.
+É possível encontrar milhares de posts em blogs e repositórios do github com 
+soluções.
 
 Aparentemente o problema mais famoso é o [primeiro](http://projecteuler.net/problem=1), 
 que pede a soma de todos os números divisíveis por 3 ou 5 menores que 1000. Uma 
