@@ -6,4 +6,5 @@ http://juanlopes.net/2016/atom.xml
 http://juanlopes.net/2016/index.html
 http://juanlopes.net/2016/tags.html
 
+http://juanlopes.net/2016/ola-internet
 http://juanlopes.net/2016/project-euler-1

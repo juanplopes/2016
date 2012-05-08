@@ -4,13 +4,39 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-08T16:42:14-03:00</updated>
+ <updated>2012-05-08T19:35:05-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
    <email>me@juanlopes.net</email>
  </author>
 
+ 
+ <entry>
+   <title>Alô Telefonia e Internet</title>
+   <link href="http://juanlopes.net/2016/ola-internet"/>
+   <updated>2012-05-08T00:00:00-03:00</updated>
+   <id>http://juanlopes.net/2016/ola-internet</id>
+   <content type="html">&lt;p&gt;Em 2016 as operadoras de telefonia e internet do Brasil ainda são horríveis.&lt;/p&gt;
+
+&lt;p&gt;No final de 2015, a Anatel baixou uma portaria que permite a cada cliente insatisfeito sublocar e operar uma parte da malha de telecomunicações no seu estado. Com isso, os programadores, maiores afetados pela incompetência das operadoras da época, fundaram operadoras próprias, que rapidamente ganharam o gosto popular.&lt;/p&gt;
+
+&lt;p&gt;Você também resolveu abrir sua própria operadora: Alô Telefonia e Internet, que presta serviços de internet para empresas do &amp;#60;seu estado&amp;#62;.&lt;/p&gt;
+
+&lt;p&gt;Rapidamente você percebeu que o recurso mais caro para operação são os cabos, que permite conectar a sua rede à dos seus clientes.&lt;/p&gt;
+
+&lt;p&gt;Para diminuir custos, você não mantém um cabo entre a sua rede e cada um dos seus clientes, o que poderia custar caro demais para manter. Na verdade, quando possível, você tenta reaproveitar o caminho já percorrido até um cliente para chegar a outro percorrendo uma distância total menor.&lt;/p&gt;
+
+&lt;p&gt;Com isso, surgiu o problema de decidir quais clientes sua operadora irá conectar para permitir que todos os clientes tenham internet, porém utilizando a menor extensão de cabo possível.&lt;/p&gt;
+&lt;div class='pic'&gt;
+    &lt;img src='/imgs/ola-bad.png' /&gt;
+    &lt;p&gt;Gastando extensão maior de cabo.&lt;/p&gt;
+&lt;/div&gt;&lt;div class='pic'&gt;
+    &lt;img src='/imgs/ola-good.png' /&gt;
+    &lt;p&gt;Assim é melhor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Resposta será publicada em 15/maio/2012.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Project Euler &#35;1 (revisado)</title>
