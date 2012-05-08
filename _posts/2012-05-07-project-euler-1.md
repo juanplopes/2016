@@ -43,3 +43,5 @@ assert euler1(1000000000) == 233333333166666668
 assert euler1(123456789123456789) == 3556368382157191567225525788624704
 {% endhighlight %}
 
+_**Resposta será publicada em 14/maio/2012.**_
+

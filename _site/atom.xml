@@ -4,7 +4,7 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-07T18:41:49-03:00</updated>
+ <updated>2012-05-08T11:52:51-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
@@ -40,7 +40,8 @@
 &lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;euler1&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;1000000000&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mi'&gt;233333333166666668&lt;/span&gt;
 &lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;euler1&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='mi'&gt;123456789123456789&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mi'&gt;3556368382157191567225525788624704&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content>
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Resposta será publicada em 14/maio/2012.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</content>
  </entry>
  
  
