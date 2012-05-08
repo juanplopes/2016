@@ -19,14 +19,23 @@ coisas insuportáveis da computação.
 
 ***
 
-### Último: [{{ site.posts[0].title }}]({{ BASE_PATH }}{{ site.posts[0].url }})
+### Não respondidos:
+
+<ul class="posts">
+  {% for post in site.tags['challenge'] %}
+    {% if post.solution and post.solution == '*' %}
+        <li><strong><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
 
 ***
 
-### Todos
+### Todos:
 
 <ul class="posts">
-  {% for post in site.posts %}
+  {% for post in site.tags['challenge'] %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>

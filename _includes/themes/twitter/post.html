@@ -1,5 +1,13 @@
 <div class="page-header">
-  <h1>{{ page.title }} <small>{{ page.tagline }}</small></h1>
+  <h1>{{ page.title }} <small>{{ page.tagline }}</small>
+  {% if page.solution %}
+      {% if page.solution == '*' %}
+        <span class='solution open' title='Resposta em breve'>ABERTO</span>
+      {% else %}
+        <a href="{{ BASE_PATH }}{{ page.solution }}" class='solution closed' title='Resposta em breve'>RESPOSTA</a>
+      {% endif %}
+  {% endif %}  
+  </h1>
 </div>
 
 <div class="row">

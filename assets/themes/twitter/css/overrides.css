@@ -1,0 +1,39 @@
+.solution {
+    color: white;
+    font-size: 12pt;
+    padding: 7px;
+    float: right;
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.solution:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.solution.open {
+    border: 1px solid #555;
+    background: #777;
+}
+
+.solution.open:hover {
+    background: #999;
+}
+
+.solution.closed {
+    border: 1px solid #383;
+    background: #5A5;
+}
+
+.solution.closed:hover {
+    background: #7C7;
+}
+
+.license {
+    margin-top: 3px;
+    float: right;
+}

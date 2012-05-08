@@ -1,7 +1,8 @@
 ---
 layout: post
 category: math
-tags: [project-euler, algebra, math]
+tags: [project-euler, algebra, math, challenge]
+solution: *
 tagline: não é tão fácil
 title: Project Euler &#35;1 (revisado)
 ---
