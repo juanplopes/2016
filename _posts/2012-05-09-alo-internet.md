@@ -24,7 +24,7 @@ que permitem conectar sua rede às dos seus clientes.
 Para diminuir custos, a operadora de João não mantém um cabo entre a sua rede e 
 cada um dos seus clientes, o que poderia custar caro demais para manter. Na verdade, 
 quando possível, ele tenta reaproveitar o caminho já percorrido até um cliente
-para chegar a outro totalizando uma distância total menor.
+para chegar a outro resultando numa distância total menor.
 
 <div class="center">
     <div class="pic inline">
