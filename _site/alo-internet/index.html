@@ -133,7 +133,7 @@
 </code></pre>
 </div>
 <p>Espera-se que a solução seja capaz de retornar uma lista exibindo as conexões que devem ser feitas entre a Alô e seus clientes, bem como o comprimento do cabo a ser utilizado em cada conexão. E.g.:</p>
-<div class='highlight'><pre><code class='python'><span class='k'>assert</span> <span class='n'>conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>)</span> <span class='o'>==</span> <span class='nb'>set</span><span class='p'>((</span>
+<div class='highlight'><pre><code class='python'><span class='k'>assert</span> <span class='nb'>set</span><span class='p'>(</span><span class='n'>conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>))</span> <span class='o'>==</span> <span class='nb'>set</span><span class='p'>((</span>
     <span class='p'>(</span><span class='s'>&quot;Alô&quot;</span><span class='p'>,</span> <span class='s'>&quot;C1&quot;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
     <span class='p'>(</span><span class='s'>&quot;C1&quot;</span><span class='p'>,</span>  <span class='s'>&quot;C2&quot;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
 <span class='p'>))</span>
@@ -158,6 +158,21 @@
     <span class='p'>(</span><span class='s'>&quot;C10&quot;</span><span class='p'>,</span>  <span class='mi'>50</span><span class='p'>,</span> <span class='mi'>26</span><span class='p'>),</span> 
     <span class='p'>(</span><span class='s'>&quot;C11&quot;</span><span class='p'>,</span>  <span class='mi'>50</span><span class='p'>,</span> <span class='mi'>27</span><span class='p'>),</span> 
 <span class='p'>)</span>
+
+<span class='k'>assert</span> <span class='nb'>set</span><span class='p'>(</span><span class='n'>conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>))</span> <span class='o'>==</span> <span class='nb'>set</span><span class='p'>((</span>
+    <span class='p'>(</span><span class='s'>&#39;Alo&#39;</span><span class='p'>,</span> <span class='s'>&#39;C4&#39;</span><span class='p'>,</span> <span class='mf'>13.45362404707371</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&#39;C4&#39;</span><span class='p'>,</span> <span class='s'>&#39;C1&#39;</span><span class='p'>,</span> <span class='mf'>41.23105625617661</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&#39;C1&#39;</span><span class='p'>,</span> <span class='s'>&#39;C5&#39;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&#39;C5&#39;</span><span class='p'>,</span> <span class='s'>&#39;C6&#39;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&#39;C6&#39;</span><span class='p'>,</span> <span class='s'>&#39;C7&#39;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&#39;C7&#39;</span><span class='p'>,</span> <span class='s'>&#39;C8&#39;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&#39;C8&#39;</span><span class='p'>,</span> <span class='s'>&#39;C9&#39;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&#39;C9&#39;</span><span class='p'>,</span> <span class='s'>&#39;C10&#39;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&#39;C10&#39;</span><span class='p'>,</span> <span class='s'>&#39;C11&#39;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&#39;C1&#39;</span><span class='p'>,</span> <span class='s'>&#39;C3&#39;</span><span class='p'>,</span> <span class='mf'>22.599999999999994</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&#39;Alo&#39;</span><span class='p'>,</span> <span class='s'>&#39;C2&#39;</span><span class='p'>,</span> <span class='mf'>204.0245083317198</span><span class='p'>)</span>
+<span class='p'>))</span>
+
 
 <span class='k'>assert</span> <span class='n'>soma_conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>)</span> <span class='o'>==</span> <span class='mf'>288.309188635</span>
 </code></pre>

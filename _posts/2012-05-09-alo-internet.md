@@ -64,7 +64,7 @@ que devem ser feitas entre a Alô e seus clientes, bem como o comprimento do cab
 a ser utilizado em cada conexão. E.g.:
 
 {% highlight python %}
-assert conexoes(clientes) == set((
+assert set(conexoes(clientes)) == set((
     ("Alô", "C1", 1.0), 
     ("C1",  "C2", 1.0), 
 ))
@@ -96,6 +96,21 @@ clientes = (
     ("C10",  50, 26), 
     ("C11",  50, 27), 
 )
+
+assert set(conexoes(clientes)) == set((
+    ('Alo', 'C4', 13.45362404707371), 
+    ('C4', 'C1', 41.23105625617661), 
+    ('C1', 'C5', 1.0), 
+    ('C5', 'C6', 1.0), 
+    ('C6', 'C7', 1.0), 
+    ('C7', 'C8', 1.0), 
+    ('C8', 'C9', 1.0), 
+    ('C9', 'C10', 1.0), 
+    ('C10', 'C11', 1.0), 
+    ('C1', 'C3', 22.599999999999994), 
+    ('Alo', 'C2', 204.0245083317198)
+))
+
 
 assert soma_conexoes(clientes) == 288.309188635
 {% endhighlight %}

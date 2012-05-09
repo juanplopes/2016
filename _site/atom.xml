@@ -4,7 +4,7 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-09T01:02:01-03:00</updated>
+ <updated>2012-05-09T01:05:04-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
@@ -50,7 +50,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;Espera-se que a solução seja capaz de retornar uma lista exibindo as conexões que devem ser feitas entre a Alô e seus clientes, bem como o comprimento do cabo a ser utilizado em cada conexão. E.g.:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='nb'&gt;set&lt;/span&gt;&lt;span class='p'&gt;((&lt;/span&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='nb'&gt;set&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;))&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='nb'&gt;set&lt;/span&gt;&lt;span class='p'&gt;((&lt;/span&gt;
     &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;Alô&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;quot;C1&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
     &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C1&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='s'&gt;&amp;quot;C2&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
 &lt;span class='p'&gt;))&lt;/span&gt;
@@ -75,6 +75,21 @@
     &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C10&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;50&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;26&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
     &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C11&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;50&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;27&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
 &lt;span class='p'&gt;)&lt;/span&gt;
+
+&lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='nb'&gt;set&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;))&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='nb'&gt;set&lt;/span&gt;&lt;span class='p'&gt;((&lt;/span&gt;
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;Alo&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C4&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;13.45362404707371&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;C4&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C1&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;41.23105625617661&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;C1&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C5&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;C5&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C6&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;C6&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C7&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;C7&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C8&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;C8&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C9&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;C9&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C10&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;C10&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C11&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;C1&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C3&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;22.599999999999994&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;#39;Alo&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;#39;C2&amp;#39;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;204.0245083317198&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+&lt;span class='p'&gt;))&lt;/span&gt;
+
 
 &lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;soma_conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mf'&gt;288.309188635&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
