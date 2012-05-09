@@ -4,7 +4,7 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-09T00:38:06-03:00</updated>
+ <updated>2012-05-09T01:02:01-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
@@ -50,14 +50,35 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;Espera-se que a solução seja capaz de retornar uma lista exibindo as conexões que devem ser feitas entre a Alô e seus clientes, bem como o comprimento do cabo a ser utilizado em cada conexão. E.g.:&lt;/p&gt;
-&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='nb'&gt;set&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='nb'&gt;set&lt;/span&gt;&lt;span class='p'&gt;((&lt;/span&gt;
     &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;Alô&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;&amp;quot;C1&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
     &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C1&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='s'&gt;&amp;quot;C2&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
-&lt;span class='p'&gt;)&lt;/span&gt;
+&lt;span class='p'&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;Perceba que pode existir mais de uma solução válida. Para João qualquer uma serve, desde que minimize o comprimento total.&lt;/p&gt;
+&lt;p&gt;Perceba que pode existir mais de uma solução válida. Para João qualquer uma serve, desde que minimize o comprimento total. Talvez faça mais sentido verificar o comprimento total, pois esse é único:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;soma_conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mf'&gt;2.0&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Para servir de guia, segue um exemplo mais complexo e uma resposta possível para o problema:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='n'&gt;clientes&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;Alo&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;0.0&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mf'&gt;1.0&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C1&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;50&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;20&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C2&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;35&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;200&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C3&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mf'&gt;72.6&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;20&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C4&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;10&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;10&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C5&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;50&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;21&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C6&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;50&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;22&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C7&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;50&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;23&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C8&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;50&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;24&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C9&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;50&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;25&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C10&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;50&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;26&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+    &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;&amp;quot;C11&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;  &lt;span class='mi'&gt;50&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='mi'&gt;27&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; 
+&lt;span class='p'&gt;)&lt;/span&gt;
 
+&lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;soma_conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mf'&gt;288.309188635&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Resposta será publicada em 16/maio/2012.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</content>
  </entry>
  

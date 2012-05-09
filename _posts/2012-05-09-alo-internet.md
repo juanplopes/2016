@@ -64,14 +64,42 @@ que devem ser feitas entre a Alô e seus clientes, bem como o comprimento do cab
 a ser utilizado em cada conexão. E.g.:
 
 {% highlight python %}
-assert conexoes(clientes) == set(
+assert conexoes(clientes) == set((
     ("Alô", "C1", 1.0), 
     ("C1",  "C2", 1.0), 
-)
+))
 {% endhighlight %}
 
 Perceba que pode existir mais de uma solução válida. Para João qualquer uma 
-serve, desde que minimize o comprimento total.
+serve, desde que minimize o comprimento total. Talvez faça mais sentido verificar
+o comprimento total, pois esse é único:
+
+{% highlight python %}
+assert soma_conexoes(clientes) == 2.0
+{% endhighlight %}
+
+Para servir de guia, segue um exemplo mais complexo e uma resposta possível para
+o problema:
+
+{% highlight python %}
+clientes = (
+    ("Alo", 0.0, 1.0), 
+    ("C1",  50, 20), 
+    ("C2",  35, -200), 
+    ("C3",  72.6, 20), 
+    ("C4",  10, 10), 
+    ("C5",  50, 21), 
+    ("C6",  50, 22), 
+    ("C7",  50, 23), 
+    ("C8",  50, 24), 
+    ("C9",  50, 25), 
+    ("C10",  50, 26), 
+    ("C11",  50, 27), 
+)
+
+assert soma_conexoes(clientes) == 288.309188635
+{% endhighlight %}
+
 
 _**Resposta será publicada em 16/maio/2012.**_
 

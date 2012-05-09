@@ -133,14 +133,35 @@
 </code></pre>
 </div>
 <p>Espera-se que a solução seja capaz de retornar uma lista exibindo as conexões que devem ser feitas entre a Alô e seus clientes, bem como o comprimento do cabo a ser utilizado em cada conexão. E.g.:</p>
-<div class='highlight'><pre><code class='python'><span class='k'>assert</span> <span class='n'>conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>)</span> <span class='o'>==</span> <span class='nb'>set</span><span class='p'>(</span>
+<div class='highlight'><pre><code class='python'><span class='k'>assert</span> <span class='n'>conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>)</span> <span class='o'>==</span> <span class='nb'>set</span><span class='p'>((</span>
     <span class='p'>(</span><span class='s'>&quot;Alô&quot;</span><span class='p'>,</span> <span class='s'>&quot;C1&quot;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
     <span class='p'>(</span><span class='s'>&quot;C1&quot;</span><span class='p'>,</span>  <span class='s'>&quot;C2&quot;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
-<span class='p'>)</span>
+<span class='p'>))</span>
 </code></pre>
 </div>
-<p>Perceba que pode existir mais de uma solução válida. Para João qualquer uma serve, desde que minimize o comprimento total.</p>
+<p>Perceba que pode existir mais de uma solução válida. Para João qualquer uma serve, desde que minimize o comprimento total. Talvez faça mais sentido verificar o comprimento total, pois esse é único:</p>
+<div class='highlight'><pre><code class='python'><span class='k'>assert</span> <span class='n'>soma_conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>)</span> <span class='o'>==</span> <span class='mf'>2.0</span>
+</code></pre>
+</div>
+<p>Para servir de guia, segue um exemplo mais complexo e uma resposta possível para o problema:</p>
+<div class='highlight'><pre><code class='python'><span class='n'>clientes</span> <span class='o'>=</span> <span class='p'>(</span>
+    <span class='p'>(</span><span class='s'>&quot;Alo&quot;</span><span class='p'>,</span> <span class='mf'>0.0</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C1&quot;</span><span class='p'>,</span>  <span class='mi'>50</span><span class='p'>,</span> <span class='mi'>20</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C2&quot;</span><span class='p'>,</span>  <span class='mi'>35</span><span class='p'>,</span> <span class='o'>-</span><span class='mi'>200</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C3&quot;</span><span class='p'>,</span>  <span class='mf'>72.6</span><span class='p'>,</span> <span class='mi'>20</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C4&quot;</span><span class='p'>,</span>  <span class='mi'>10</span><span class='p'>,</span> <span class='mi'>10</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C5&quot;</span><span class='p'>,</span>  <span class='mi'>50</span><span class='p'>,</span> <span class='mi'>21</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C6&quot;</span><span class='p'>,</span>  <span class='mi'>50</span><span class='p'>,</span> <span class='mi'>22</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C7&quot;</span><span class='p'>,</span>  <span class='mi'>50</span><span class='p'>,</span> <span class='mi'>23</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C8&quot;</span><span class='p'>,</span>  <span class='mi'>50</span><span class='p'>,</span> <span class='mi'>24</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C9&quot;</span><span class='p'>,</span>  <span class='mi'>50</span><span class='p'>,</span> <span class='mi'>25</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C10&quot;</span><span class='p'>,</span>  <span class='mi'>50</span><span class='p'>,</span> <span class='mi'>26</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C11&quot;</span><span class='p'>,</span>  <span class='mi'>50</span><span class='p'>,</span> <span class='mi'>27</span><span class='p'>),</span> 
+<span class='p'>)</span>
 
+<span class='k'>assert</span> <span class='n'>soma_conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>)</span> <span class='o'>==</span> <span class='mf'>288.309188635</span>
+</code></pre>
+</div>
 <p><em><strong>Resposta será publicada em 16/maio/2012.</strong></em></p>
     <hr>
     <div class="pagination">
