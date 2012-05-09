@@ -104,21 +104,44 @@
 
 <p>No final de 2015, a Anatel baixou uma portaria que permite a cada cliente insatisfeito sublocar e operar uma parte da malha de telecomunicações no seu estado. Com isso, os programadores, maiores afetados pela incompetência das operadoras da época, fundaram operadoras próprias, que rapidamente ganharam o gosto popular.</p>
 
-<p>Você também resolveu abrir sua própria operadora: Alô Telefonia e Internet, que presta serviços de internet para empresas do &#60;seu estado&#62;.</p>
+<p>João também resolveu abrir sua própria operadora: Alô Telefonia e Internet, que presta serviços de internet para empresas da sua região.</p>
 
-<p>Rapidamente você percebeu que o recurso mais caro para operação são os cabos, que permite conectar a sua rede à dos seus clientes.</p>
+<p>Rapidamente ele percebeu que o recurso mais caro para operação são os cabos, que permitem conectar sua rede às dos seus clientes.</p>
 
-<p>Para diminuir custos, você não mantém um cabo entre a sua rede e cada um dos seus clientes, o que poderia custar caro demais para manter. Na verdade, quando possível, você tenta reaproveitar o caminho já percorrido até um cliente para chegar a outro percorrendo uma distância total menor.</p>
+<p>Para diminuir custos, a operadora de João não mantém um cabo entre a sua rede e cada um dos seus clientes, o que poderia custar caro demais para manter. Na verdade, quando possível, ele tenta reaproveitar o caminho já percorrido até um cliente para chegar a outro totalizando uma distância total menor.</p>
+<div class='center'>
+    <div class='pic inline'>
+        <img src='/imgs/alo-internet/bad.png' />
+        <p>Assim é ruim.</p>
+    </div>
 
-<p>Com isso, surgiu o problema de decidir quais clientes sua operadora irá conectar para permitir que todos os clientes tenham internet, porém utilizando a menor extensão de cabo possível.</p>
-<div class='pic'>
-    <img src='/imgs/ola-bad.png' />
-    <p>Gastando extensão maior de cabo.</p>
-</div><div class='pic'>
-    <img src='/imgs/ola-good.png' />
-    <p>Assim é melhor.</p>
+    <div class='pic inline'>
+        <img src='/imgs/alo-internet/good.png' />
+        <p>Assim é melhor.</p>
+    </div>
 </div>
-<p><em><strong>Resposta será publicada em 15/maio/2012.</strong></em></p>
+<p>Com isso, surgiu o problema de decidir quais clientes a Alô irá conectar para permitir que todos tenham internet, porém utilizando a menor extensão de cabo possível. João é um bom programador, e prefere escrever um programa que faça isso. Como ele nunca estudou muito sobre algoritmos, ele pediu a sua ajuda.</p>
+
+<p>A única informação que você tem disponível é o nome e posição geográfica de cada cliente. O objetivo é diminuir a soma total do comprimento dos cabos usados para conectar esses clientes.</p>
+
+<p>Por exemplo, suponha que você tenha a seguinte lista de clientes e suas posições geográficas. Para fins práticos, você pode considerar os clientes como pontos em um plano cartesiano:</p>
+<div class='highlight'><pre><code class='python'><span class='n'>clientes</span> <span class='o'>=</span> <span class='p'>(</span>
+    <span class='p'>(</span><span class='s'>&quot;Alô&quot;</span><span class='p'>,</span> <span class='mf'>0.0</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C1&quot;</span><span class='p'>,</span>  <span class='mf'>0.0</span><span class='p'>,</span> <span class='mf'>0.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C2&quot;</span><span class='p'>,</span>  <span class='mf'>1.0</span><span class='p'>,</span> <span class='mf'>0.0</span><span class='p'>)</span>
+<span class='p'>)</span>
+</code></pre>
+</div>
+<p>Espera-se que a solução seja capaz de retornar uma lista exibindo as conexões que devem ser feitas entre a Alô e seus clientes, bem como o comprimento do cabo a ser utilizado em cada conexão. E.g.:</p>
+<div class='highlight'><pre><code class='python'><span class='k'>assert</span> <span class='n'>conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>)</span> <span class='o'>==</span> <span class='nb'>set</span><span class='p'>(</span>
+    <span class='p'>(</span><span class='s'>&quot;Alô&quot;</span><span class='p'>,</span> <span class='s'>&quot;C1&quot;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+    <span class='p'>(</span><span class='s'>&quot;C1&quot;</span><span class='p'>,</span>  <span class='s'>&quot;C2&quot;</span><span class='p'>,</span> <span class='mf'>1.0</span><span class='p'>),</span> 
+<span class='p'>)</span>
+</code></pre>
+</div>
+<p>Perceba que pode existir mais de uma solução válida. Para João qualquer uma serve, desde que minimize o comprimento total.</p>
+
+<p><em><strong>Resposta será publicada em 16/maio/2012.</strong></em></p>
     <hr>
     <div class="pagination">
       <ul>
@@ -157,7 +180,7 @@
   
   <div class="span4">
     <h4>Published</h4>
-    <div class="date"><span>08 May 2012</span></div>
+    <div class="date"><span>09 May 2012</span></div>
 
   
     <h4>Tags</h4>

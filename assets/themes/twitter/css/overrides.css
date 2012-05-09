@@ -33,9 +33,17 @@
     background: #7C7;
 }
 
+.center {
+    text-align: center;
+}
+
+.pic {
+    display: inline-block;
+}
+
 .pic {
     text-align: center;
-    margin: 20px auto;
+    margin: 20px 10px;
     
 }
 
