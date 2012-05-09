@@ -4,7 +4,7 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-08T19:35:05-03:00</updated>
+ <updated>2012-05-08T21:10:14-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
@@ -17,7 +17,7 @@
    <link href="http://juanlopes.net/2016/ola-internet"/>
    <updated>2012-05-08T00:00:00-03:00</updated>
    <id>http://juanlopes.net/2016/ola-internet</id>
-   <content type="html">&lt;p&gt;Em 2016 as operadoras de telefonia e internet do Brasil ainda são horríveis.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Em 2016, as operadoras de telefonia e internet do Brasil ainda são horríveis.&lt;/p&gt;
 
 &lt;p&gt;No final de 2015, a Anatel baixou uma portaria que permite a cada cliente insatisfeito sublocar e operar uma parte da malha de telecomunicações no seu estado. Com isso, os programadores, maiores afetados pela incompetência das operadoras da época, fundaram operadoras próprias, que rapidamente ganharam o gosto popular.&lt;/p&gt;
 
@@ -43,7 +43,7 @@
    <link href="http://juanlopes.net/2016/project-euler-1"/>
    <updated>2012-05-07T00:00:00-03:00</updated>
    <id>http://juanlopes.net/2016/project-euler-1</id>
-   <content type="html">&lt;p&gt;O &lt;a href='http://projecteuler.net/'&gt;Project Euler&lt;/a&gt; ganhou muita importância ultimamente. É possível encontrar centenas (se não milhares) de posts em blogs e repositórios do github com soluções.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Em 2016, o &lt;a href='http://projecteuler.net/'&gt;Project Euler&lt;/a&gt; ganhou muita importância ultimamente. É possível encontrar centenas (se não milhares) de posts em blogs e repositórios do github com soluções nas mais variadas linguagens.&lt;/p&gt;
 
 &lt;p&gt;Aparentemente o problema mais famoso é o &lt;a href='http://projecteuler.net/problem=1'&gt;primeiro&lt;/a&gt;, que pede a soma de todos os números divisíveis por 3 ou 5 menores que 1000. Uma solução simples (e eficaz) em python pareceria com:&lt;/p&gt;
 &lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;euler1&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;limit&lt;/span&gt;&lt;span class='p'&gt;):&lt;/span&gt;
