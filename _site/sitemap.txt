@@ -6,5 +6,5 @@ http://juanlopes.net/2016/archive.html
 http://juanlopes.net/2016/index.html
 http://juanlopes.net/2016/tags.html
 
-http://juanlopes.net/2016/ola-internet
+http://juanlopes.net/2016/alo-internet
 http://juanlopes.net/2016/project-euler-1

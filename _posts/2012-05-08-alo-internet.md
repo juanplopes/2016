@@ -1,14 +1,14 @@
 ---
 layout: post
 category: graphs
-tags: [dojorio, challenge]
+tags: [challenge, draft]
 solution: *
 tagline: simples assim
 title: Alô Telefonia e Internet
 ---
 {% include JB/setup %}
 
-Em 2016, as operadoras de telefonia e internet do Brasil ainda são horríveis.
+Em 2016, a internet no Brasil ainda é ruim.
 
 No final de 2015, a Anatel baixou uma portaria que permite a cada cliente 
 insatisfeito sublocar e operar uma parte da malha de telecomunicações no seu estado.

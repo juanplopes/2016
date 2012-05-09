@@ -4,7 +4,7 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-08T21:10:14-03:00</updated>
+ <updated>2012-05-08T23:43:44-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
@@ -14,10 +14,10 @@
  
  <entry>
    <title>Alô Telefonia e Internet</title>
-   <link href="http://juanlopes.net/2016/ola-internet"/>
+   <link href="http://juanlopes.net/2016/alo-internet"/>
    <updated>2012-05-08T00:00:00-03:00</updated>
-   <id>http://juanlopes.net/2016/ola-internet</id>
-   <content type="html">&lt;p&gt;Em 2016, as operadoras de telefonia e internet do Brasil ainda são horríveis.&lt;/p&gt;
+   <id>http://juanlopes.net/2016/alo-internet</id>
+   <content type="html">&lt;p&gt;Em 2016, a internet no Brasil ainda é ruim.&lt;/p&gt;
 
 &lt;p&gt;No final de 2015, a Anatel baixou uma portaria que permite a cada cliente insatisfeito sublocar e operar uma parte da malha de telecomunicações no seu estado. Com isso, os programadores, maiores afetados pela incompetência das operadoras da época, fundaram operadoras próprias, que rapidamente ganharam o gosto popular.&lt;/p&gt;
 
