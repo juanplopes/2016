@@ -32,3 +32,19 @@
 .solution.closed:hover {
     background: #7C7;
 }
+
+.pic {
+    text-align: center;
+    margin: 20px auto;
+    
+}
+
+.pic img {
+    border: 1px solid #666;  
+    background-color: #EEE;
+    padding: 5px;
+}
+
+.pic p {
+    font-style: italic;
+}
