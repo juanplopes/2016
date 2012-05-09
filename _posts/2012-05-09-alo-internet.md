@@ -1,7 +1,7 @@
 ---
 layout: post
 category: graphs
-tags: [challenge, draft]
+tags: [challenge]
 solution: *
 tagline: simples assim
 title: Alô Telefonia e Internet
