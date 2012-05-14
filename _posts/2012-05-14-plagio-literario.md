@@ -3,7 +3,7 @@ layout: post
 category: string-matching
 tags: [challenge]
 solution: *
-tagline: não é tão fácil
+tagline: qualquer semelhança é mera coincidência
 title: Plágio Literário
 ---
 {% include JB/setup %}
