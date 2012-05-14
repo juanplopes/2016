@@ -2,7 +2,7 @@
 layout: post
 category: math
 tags: [project-euler, challenge]
-solution: *
+solution: /project-euler-1-resposta
 tagline: não é tão fácil
 title: Project Euler &#35;1 (revisado)
 ---

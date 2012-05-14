@@ -19,24 +19,15 @@ coisas insuportáveis da computação.
 
 ***
 
-### Não respondidos:
+### Desafios:
 
-<ul class="posts">
+<ul class="challenges">
   {% for post in site.tags['challenge'] %}
-    {% if post.solution and post.solution == '*' %}
-        <li><strong><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong></li>
+    {% if post.solution == '*' %}
+        <li><span class='solution small open' title='Resposta em breve'>ABERTO</span> <strong><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></strong> </li>
+    {% else %}
+        <li><a href="{{ BASE_PATH }}{{ post.solution }}" class='solution small closed' title='Clica aí'>RESPONDIDO</a> <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a> </li>
     {% endif %}
-  {% endfor %}
-</ul>
-
-
-***
-
-### Todos:
-
-<ul class="posts">
-  {% for post in site.tags['challenge'] %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
 

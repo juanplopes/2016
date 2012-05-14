@@ -1,0 +1,234 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>This is 2016, not 2012. - Resposta: Project Euler &#35;1 (revisado)</title>
+    
+    <meta name="author" content="Juan Lopes">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/css/pygments.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/css/overrides.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <a href="https://github.com/juanplopes/2016"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">This is 2016, not 2012.</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+          <a href="http://feeds.feedburner.com/2016not2012" class="feed">&nbsp;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+
+<div class="page-header">
+  <h1>Resposta: Project Euler &#35;1 (revisado) <small>viu?</small>
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p><em>Quem respondeu: <a href='https://twitter.com/danielpresser'>Daniel Presser</a>, <a href='http://twitter.com/ariassp'>Victor Arias</a> e <a href='http://twitter.com/rodrigovidal'>Rodrigo Vidal</a></em></p>
+
+<p>Viu como não era tão fácil?</p>
+
+<p>O problema da solução original é que ela precisava verificar cada número entre o início e o fim do intervalo executando divisões entre eles. Para 1000 números o tempo de execução era até razoável, mas quando passava da casa das centenas de milhões, era preciso encontrar um algoritmo melhor.</p>
+
+<p>A sacada do algoritmo era perceber que a soma dos números divisíveis por 3 tem a forma:</p>
+
+<p><code>
+3 + 6 + 9 + 12 + 15 + ... + 999
+</code></p>
+
+<p>Que podem se escritos como:</p>
+
+<p><code>
+3 * (1 + 2 + 3 + 4 + 5 + ... + 333)
+</code></p>
+
+<p>Isso é a fórmula de uma <a href='http://en.wikipedia.org/wiki/Arithmetic_progression'>PA</a>. Como o <a href='http://twitter.com/ariassp'>Victor Arias</a> apontou, essa soma tem a forma:</p>
+
+<p><code>
+3 * 333 * 334 / 2
+</code></p>
+
+<p>Generalizando:</p>
+
+<p><code>
+3 * n * (n+1) / 2
+</code></p>
+
+<p>Perceba que o somatório acontece entre 1 e 333, pois 999/3 = 333. Para o divisor 5, o valor de &#8220;n&#8221; deverá ser 999/5 = 199. Assim, definimos S como sendo &#8220;a soma de todos os múltiplos de k entre 1 e x&#8221;</p>
+<div class='highlight'><pre><code class='python'><span class='k'>def</span> <span class='nf'>S</span><span class='p'>(</span><span class='n'>k</span><span class='p'>,</span> <span class='n'>x</span><span class='p'>):</span>
+    <span class='n'>n</span> <span class='o'>=</span> <span class='n'>x</span><span class='o'>/</span><span class='n'>k</span>
+    <span class='k'>return</span> <span class='n'>k</span><span class='o'>*</span><span class='n'>n</span><span class='o'>*</span><span class='p'>(</span><span class='n'>n</span><span class='o'>+</span><span class='mi'>1</span><span class='p'>)</span><span class='o'>/</span><span class='mi'>2</span>
+
+<span class='k'>assert</span> <span class='n'>S</span><span class='p'>(</span><span class='mi'>3</span><span class='p'>,</span> <span class='mi'>999</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>166833</span>
+<span class='k'>assert</span> <span class='n'>S</span><span class='p'>(</span><span class='mi'>5</span><span class='p'>,</span> <span class='mi'>999</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>99500</span>
+<span class='k'>assert</span> <span class='n'>S</span><span class='p'>(</span><span class='mi'>3</span><span class='p'>,</span> <span class='mi'>999</span><span class='p'>)</span><span class='o'>+</span><span class='n'>S</span><span class='p'>(</span><span class='mi'>5</span><span class='p'>,</span> <span class='mi'>999</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>266333</span>
+</code></pre>
+</div>
+<p>Perceba que se somarmos os múltiplos de 3 e 5 até 999, o valor não é o esperado (233168). Isso acontece porque números divisíveis por 3 e 5 ao mesmo tempo são contados tanto como divisores de 3 como de 5, e seu valor acaba se repedindo na soma. Para evitar esse problema, basta definir a função <code>euler1(limit)</code> como:</p>
+<div class='highlight'><pre><code class='python'><span class='k'>def</span> <span class='nf'>euler1</span><span class='p'>(</span><span class='n'>limit</span><span class='p'>):</span>
+    <span class='k'>return</span> <span class='n'>S</span><span class='p'>(</span><span class='mi'>3</span><span class='p'>,</span> <span class='n'>limit</span><span class='o'>-</span><span class='mi'>1</span><span class='p'>)</span> <span class='o'>+</span> <span class='n'>S</span><span class='p'>(</span><span class='mi'>5</span><span class='p'>,</span> <span class='n'>limit</span><span class='o'>-</span><span class='mi'>1</span><span class='p'>)</span> <span class='o'>-</span> <span class='n'>S</span><span class='p'>(</span><span class='mi'>15</span><span class='p'>,</span> <span class='n'>limit</span><span class='o'>-</span><span class='mi'>1</span><span class='p'>)</span>
+
+<span class='k'>assert</span> <span class='n'>euler1</span><span class='p'>(</span><span class='mi'>1000</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>233168</span>
+<span class='k'>assert</span> <span class='n'>euler1</span><span class='p'>(</span><span class='mi'>1234</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>354858</span>
+<span class='k'>assert</span> <span class='n'>euler1</span><span class='p'>(</span><span class='mi'>1000000000</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>233333333166666668</span>
+<span class='k'>assert</span> <span class='n'>euler1</span><span class='p'>(</span><span class='mi'>123456789123456789</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>3556368382157191567225525788624704</span>
+</code></pre>
+</div>
+<p>Assim, removemos as duplicidades por excluir uma vez da soma os números que são divisíveis por 3 e 5, i.e., os divisíveis por 15.</p>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/alo-internet" title="Alô Telefonia e Internet">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '2016not2012'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>14 May 2012</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#project-euler-ref">project-euler <span>2</span></a></li>
+     
+    	<li><a href="/tags.html#answer-ref">answer <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+      </div>
+
+      <footer>
+        <p>&copy; Juan Lopes 2012</p>
+        <p>
+            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+        </p>
+        <p>
+          Powered by <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
