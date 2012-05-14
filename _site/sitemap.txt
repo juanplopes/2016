@@ -1,11 +1,12 @@
 
-http://juanlopes.net/2016/atom.xml
-http://juanlopes.net/2016/sitemap.txt
-http://juanlopes.net/2016/categories.html
 http://juanlopes.net/2016/archive.html
+http://juanlopes.net/2016/categories.html
+http://juanlopes.net/2016/sitemap.txt
+http://juanlopes.net/2016/atom.xml
 http://juanlopes.net/2016/index.html
 http://juanlopes.net/2016/tags.html
 
 http://juanlopes.net/2016/project-euler-1-resposta
+http://juanlopes.net/2016/plagio-literario
 http://juanlopes.net/2016/alo-internet
 http://juanlopes.net/2016/project-euler-1

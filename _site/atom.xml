@@ -4,7 +4,7 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-14T00:20:15-03:00</updated>
+ <updated>2012-05-14T12:10:14-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
@@ -68,6 +68,56 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;Assim, removemos as duplicidades por excluir uma vez da soma os números que são divisíveis por 3 e 5, i.e., os divisíveis por 15.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Plágio Literário</title>
+   <link href="http://juanlopes.net/2016/plagio-literario"/>
+   <updated>2012-05-14T00:00:00-03:00</updated>
+   <id>http://juanlopes.net/2016/plagio-literario</id>
+   <content type="html">&lt;p&gt;A cena literária em 2016 cresceu assustadoramente. Os livros técnicos sobre programação são os mais vendidos. Provavelmente reflexo do estouro da bolha de tecnologia, que deixou muitos programadores desempregados.&lt;/p&gt;
+
+&lt;p&gt;Com o crescimento da venda de livros, cresceram também os casos de plágio. Muitos autores sofriam com seus livros sendo copiados e revendidos como novos livros.&lt;/p&gt;
+
+&lt;p&gt;Os plagiadores eram espertos e, para tentar evitar as denúncias de plágio, modificavam um pouco o texto original, adicionando, removendo e trocando algumas palvras. Por exemplo, uma frase que originalmente era:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+Para seguir um modelo em cascata, o progresso de uma fase para a próxima se dá 
+de uma forma puramente sequencial.
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;pode tornar-se&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+Para obedecer um modelo em cascata, a mudança de uma fase para outra se dá de 
+forma completamente sequencial.
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Basta modificar 5 palavras (seguir -&amp;gt; obedecer, o -&amp;gt; a, progresso -&amp;gt; mudança, próxima -&amp;gt; outra, puramente -&amp;gt; completamente) e remover 2 (a, uma). Então, de 21 palavras originais, com 7 mudanças é possível transformar um texto no outro.&lt;/p&gt;
+
+&lt;p&gt;Para esse problema, define-se &amp;#8220;palavra&amp;#8221; qualquer sequencia contígua de letras do alfabeto.&lt;/p&gt;
+
+&lt;p&gt;Então, dados dois trechos de texto, é preciso verificar o menor número de edições (inserções, remoções e alterações de palavras) para transformar um texto no outro.&lt;/p&gt;
+
+&lt;p&gt;Exemplos:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;plagio&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;u&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class='s'&gt;Para seguir   um modelo em cascata, o progresso de uma fase para a próxima se dá &lt;/span&gt;
+&lt;span class='s'&gt;de uma forma puramente     sequencial.&lt;/span&gt;
+&lt;span class='s'&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;u&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class='s'&gt;Para obedecer um modelo em cascata, a mudança   de uma fase para   outra   se dá &lt;/span&gt;
+&lt;span class='s'&gt;de     forma completamente sequencial.&lt;/span&gt;
+&lt;span class='s'&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mi'&gt;7&lt;/span&gt;
+
+&lt;span class='k'&gt;assert&lt;/span&gt; &lt;span class='n'&gt;plagio&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='s'&gt;u&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class='s'&gt;Para seguir   um modelo em cascata, o progresso de uma fase para a próxima se dá &lt;/span&gt;
+&lt;span class='s'&gt;de uma forma puramente     sequencial.&lt;/span&gt;
+&lt;span class='s'&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='s'&gt;u&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class='s'&gt;Bata as claras em neve, misture as gemas e o açúcar e torne a bater.&lt;/span&gt;
+&lt;span class='s'&gt;Depois, misture a farinha e o suco de laranja. Por último acrescente o fermento.&lt;/span&gt;
+&lt;span class='s'&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mi'&gt;26&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Resposta será publicada em 21/maio/2012.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</content>
  </entry>
  
  <entry>

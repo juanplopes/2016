@@ -5,7 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>This is 2016, not 2012. - Project Euler &#35;1 (revisado)</title>
+    <title>This is 2016, not 2012. - Plágio Literário</title>
     
     <meta name="author" content="Juan Lopes">
 
@@ -94,10 +94,10 @@
 
 
 <div class="page-header">
-  <h1>Project Euler &#35;1 (revisado) <small>não é tão fácil</small>
+  <h1>Plágio Literário <small>não é tão fácil</small>
   
       
-        <a href="/project-euler-1-resposta" class='solution big closed' title='Clica aí'>RESPONDIDO</a>
+        <span class='solution big open' title='Resposta em breve'>ABERTO</span>
       
     
   </h1>
@@ -105,40 +105,58 @@
 
 <div class="row">
   <div class="span8">
-    <p>Em 2016, o <a href='http://projecteuler.net/'>Project Euler</a> ganhou muita importância. É possível encontrar centenas (se não milhares) de posts em blogs e repositórios do github com soluções nas mais variadas linguagens.</p>
+    <p>A cena literária em 2016 cresceu assustadoramente. Os livros técnicos sobre programação são os mais vendidos. Provavelmente reflexo do estouro da bolha de tecnologia, que deixou muitos programadores desempregados.</p>
 
-<p>Aparentemente o problema mais famoso é o <a href='http://projecteuler.net/problem=1'>primeiro</a>, que pede a soma de todos os números divisíveis por 3 ou 5 menores que 1000. Uma solução simples (e eficaz) em python pareceria com:</p>
-<div class='highlight'><pre><code class='python'><span class='k'>def</span> <span class='nf'>euler1</span><span class='p'>(</span><span class='n'>limit</span><span class='p'>):</span>
-    <span class='n'>answer</span><span class='o'>=</span><span class='mi'>0</span>
-    <span class='k'>for</span> <span class='n'>i</span> <span class='ow'>in</span> <span class='nb'>range</span><span class='p'>(</span><span class='n'>limit</span><span class='p'>):</span>
-        <span class='k'>if</span> <span class='n'>i</span><span class='o'>%</span><span class='mi'>3</span><span class='o'>==</span><span class='mi'>0</span> <span class='ow'>or</span> <span class='n'>i</span><span class='o'>%</span><span class='mi'>5</span><span class='o'>==</span><span class='mi'>0</span><span class='p'>:</span>
-            <span class='n'>answer</span><span class='o'>+=</span><span class='n'>i</span>
-    <span class='k'>return</span> <span class='n'>answer</span>
+<p>Com o crescimento da venda de livros, cresceram também os casos de plágio. Muitos autores sofriam com seus livros sendo copiados e revendidos como novos livros.</p>
 
-<span class='k'>print</span> <span class='n'>euler1</span><span class='p'>(</span><span class='mi'>1000</span><span class='p'>)</span>
+<p>Os plagiadores eram espertos e, para tentar evitar as denúncias de plágio, modificavam um pouco o texto original, adicionando, removendo e trocando algumas palvras. Por exemplo, uma frase que originalmente era:</p>
+
+<p><code>
+Para seguir um modelo em cascata, o progresso de uma fase para a próxima se dá 
+de uma forma puramente sequencial.
+</code></p>
+
+<p>pode tornar-se</p>
+
+<p><code>
+Para obedecer um modelo em cascata, a mudança de uma fase para outra se dá de 
+forma completamente sequencial.
+</code></p>
+
+<p>Basta modificar 5 palavras (seguir -&gt; obedecer, o -&gt; a, progresso -&gt; mudança, próxima -&gt; outra, puramente -&gt; completamente) e remover 2 (a, uma). Então, de 21 palavras originais, com 7 mudanças é possível transformar um texto no outro.</p>
+
+<p>Para esse problema, define-se &#8220;palavra&#8221; qualquer sequencia contígua de letras do alfabeto.</p>
+
+<p>Então, dados dois trechos de texto, é preciso verificar o menor número de edições (inserções, remoções e alterações de palavras) para transformar um texto no outro.</p>
+
+<p>Exemplos:</p>
+<div class='highlight'><pre><code class='python'><span class='k'>assert</span> <span class='n'>plagio</span><span class='p'>(</span><span class='s'>u&quot;&quot;&quot;</span>
+<span class='s'>Para seguir   um modelo em cascata, o progresso de uma fase para a próxima se dá </span>
+<span class='s'>de uma forma puramente     sequencial.</span>
+<span class='s'>&quot;&quot;&quot;</span><span class='p'>,</span> <span class='s'>u&quot;&quot;&quot;</span>
+<span class='s'>Para obedecer um modelo em cascata, a mudança   de uma fase para   outra   se dá </span>
+<span class='s'>de     forma completamente sequencial.</span>
+<span class='s'>&quot;&quot;&quot;</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>7</span>
+
+<span class='k'>assert</span> <span class='n'>plagio</span><span class='p'>(</span><span class='s'>u&quot;&quot;&quot;</span>
+<span class='s'>Para seguir   um modelo em cascata, o progresso de uma fase para a próxima se dá </span>
+<span class='s'>de uma forma puramente     sequencial.</span>
+<span class='s'>&quot;&quot;&quot;</span><span class='p'>,</span> <span class='s'>u&quot;&quot;&quot;</span>
+<span class='s'>Bata as claras em neve, misture as gemas e o açúcar e torne a bater.</span>
+<span class='s'>Depois, misture a farinha e o suco de laranja. Por último acrescente o fermento.</span>
+<span class='s'>&quot;&quot;&quot;</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>26</span>
 </code></pre>
 </div>
-<p>Essa é uma solução válida para esse problema. Funciona muito bem até 1000. O problema é que ela não escala tão bem. Executar <code>euler1(1000000000)</code> demoraria tempo suficiente para desistir.</p>
-
-<p>Esse é o problema. Desenvolva uma solução que rode em tempo satisfatório para valores bem maiores que 1000. Não há limite esperado. Qual o máximo que a sua solução resolveria em, digamos, menos de 1 minuto?</p>
-
-<p>Seguem alguns casos de teste com alguns valores grandes:</p>
-<div class='highlight'><pre><code class='python'><span class='k'>assert</span> <span class='n'>euler1</span><span class='p'>(</span><span class='mi'>1000</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>233168</span>
-<span class='k'>assert</span> <span class='n'>euler1</span><span class='p'>(</span><span class='mi'>1234</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>354858</span>
-<span class='k'>assert</span> <span class='n'>euler1</span><span class='p'>(</span><span class='mi'>1000000000</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>233333333166666668</span>
-<span class='k'>assert</span> <span class='n'>euler1</span><span class='p'>(</span><span class='mi'>123456789123456789</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>3556368382157191567225525788624704</span>
-</code></pre>
-</div>
-<p><em><strong>Resposta será publicada em 14/maio/2012.</strong></em></p>
+<p><em><strong>Resposta será publicada em 21/maio/2012.</strong></em></p>
     <hr>
     <div class="pagination">
       <ul>
       
-        <li class="prev disabled"><a>&larr; Previous</a></li>
+        <li class="prev"><a href="/alo-internet" title="Alô Telefonia e Internet">&larr; Previous</a></li>
       
         <li><a href="/archive.html">Archive</a></li>
       
-        <li class="next"><a href="/alo-internet" title="Alô Telefonia e Internet">Next &rarr;</a></li>
+        <li class="next"><a href="/project-euler-1-resposta" title="Resposta: Project Euler &#35;1 (revisado)">Next &rarr;</a></li>
       
       </ul>
     </div>
@@ -168,7 +186,7 @@
   
   <div class="span4">
     <h4>Published</h4>
-    <div class="date"><span>07 May 2012</span></div>
+    <div class="date"><span>14 May 2012</span></div>
 
   
     <h4>Tags</h4>
@@ -178,8 +196,6 @@
 
 
   
-     
-    	<li><a href="/tags.html#project-euler-ref">project-euler <span>2</span></a></li>
      
     	<li><a href="/tags.html#challenge-ref">challenge <span>3</span></a></li>
     
