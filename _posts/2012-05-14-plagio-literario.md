@@ -13,11 +13,11 @@ são os mais vendidos. Provavelmente reflexo do estouro da bolha de tecnologia,
 que deixou muitos programadores desempregados.
 
 Com o crescimento da venda de livros, cresceram também os casos de plágio. Muitos
-autores sofriam com seus livros sendo copiados e revendidos como novos livros.
+autores sofrem com seus livros sendo copiados e revendidos como novos livros.
 
-Os plagiadores eram espertos e, para tentar evitar as denúncias de plágio, modificavam
+Os plagiadores são espertos e, para tentar evitar as denúncias de plágio, modificam
 um pouco o texto original, adicionando, removendo e trocando algumas palvras.
-Por exemplo, uma frase que originalmente era:
+Por exemplo, uma frase que originalmente é:
 
 ```
 Para seguir um modelo em cascata, o progresso de uma fase para a próxima se dá 
@@ -60,6 +60,9 @@ Bata as claras em neve, misture as gemas e o açúcar e torne a bater.
 Depois, misture a farinha e o suco de laranja. Por último acrescente o fermento.
 """) == 26
 {% endhighlight %}
+
+Assim, os autores poderão automatizar essa busca e mais facilmente detectar
+plágios.
 
 _**Resposta será publicada em 21/maio/2012.**_
 

@@ -4,7 +4,7 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-14T12:10:14-03:00</updated>
+ <updated>2012-05-14T12:14:29-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
@@ -77,9 +77,9 @@
    <id>http://juanlopes.net/2016/plagio-literario</id>
    <content type="html">&lt;p&gt;A cena literária em 2016 cresceu assustadoramente. Os livros técnicos sobre programação são os mais vendidos. Provavelmente reflexo do estouro da bolha de tecnologia, que deixou muitos programadores desempregados.&lt;/p&gt;
 
-&lt;p&gt;Com o crescimento da venda de livros, cresceram também os casos de plágio. Muitos autores sofriam com seus livros sendo copiados e revendidos como novos livros.&lt;/p&gt;
+&lt;p&gt;Com o crescimento da venda de livros, cresceram também os casos de plágio. Muitos autores sofrem com seus livros sendo copiados e revendidos como novos livros.&lt;/p&gt;
 
-&lt;p&gt;Os plagiadores eram espertos e, para tentar evitar as denúncias de plágio, modificavam um pouco o texto original, adicionando, removendo e trocando algumas palvras. Por exemplo, uma frase que originalmente era:&lt;/p&gt;
+&lt;p&gt;Os plagiadores são espertos e, para tentar evitar as denúncias de plágio, modificam um pouco o texto original, adicionando, removendo e trocando algumas palvras. Por exemplo, uma frase que originalmente é:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;
 Para seguir um modelo em cascata, o progresso de uma fase para a próxima se dá 
@@ -117,6 +117,8 @@ forma completamente sequencial.
 &lt;span class='s'&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='o'&gt;==&lt;/span&gt; &lt;span class='mi'&gt;26&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+&lt;p&gt;Assim, os autores poderão automatizar essa busca e mais facilmente detectar plágios.&lt;/p&gt;
+
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Resposta será publicada em 21/maio/2012.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</content>
  </entry>
  
