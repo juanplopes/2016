@@ -4,7 +4,7 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-06-13T00:03:31-03:00</updated>
+ <updated>2012-06-13T00:11:29-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
@@ -21,7 +21,7 @@
 
 &lt;p&gt;Felizmente para a Alô Telefonia e Internet, o problema de conectar todos os clientes usando o mínimo de cabo pode ser modelado como um problema clássico da área de grafos.&lt;/p&gt;
 
-&lt;p&gt;O problema questiona: dado um grafo (nós e arestas), qual a soma mínima do peso de arestas que permite ligar todos os nós do grafo.&lt;/p&gt;
+&lt;p&gt;O problema questiona: dado um grafo (nós e arestas), qual a soma mínima do peso de arestas que permite ligar todos os nós do grafo?&lt;/p&gt;
 &lt;div class='center'&gt;
     &lt;div class='pic inline'&gt;
         &lt;img src='/imgs/alo-internet/classic-question.png' /&gt;

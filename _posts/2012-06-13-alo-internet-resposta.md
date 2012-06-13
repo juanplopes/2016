@@ -14,7 +14,7 @@ clientes usando o mínimo de cabo pode ser modelado como um problema clássico d
 área de grafos.
 
 O problema questiona: dado um grafo (nós e arestas), qual a soma mínima do peso
-de arestas que permite ligar todos os nós do grafo.
+de arestas que permite ligar todos os nós do grafo?
 
 <div class="center">
     <div class="pic inline">
