@@ -2,7 +2,7 @@
 layout: post
 category: graphs
 tags: [challenge]
-solution: *
+solution: /alo-internet-resposta
 tagline: simples assim
 title: Alô Telefonia e Internet
 ---

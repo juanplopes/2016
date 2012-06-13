@@ -4,13 +4,122 @@
  <title>This is 2016, not 2012.</title>
  <link href="http://juanlopes.net/2016/atom.xml" rel="self"/>
  <link href="http://juanlopes.net/2016"/>
- <updated>2012-05-14T12:15:19-03:00</updated>
+ <updated>2012-06-13T00:03:31-03:00</updated>
  <id>http://juanlopes.net/2016</id>
  <author>
    <name>Juan Lopes</name>
    <email>me@juanlopes.net</email>
  </author>
 
+ 
+ <entry>
+   <title>Resposta: Alô Telefonia e Internet</title>
+   <link href="http://juanlopes.net/2016/alo-internet-resposta"/>
+   <updated>2012-06-13T00:00:00-03:00</updated>
+   <id>http://juanlopes.net/2016/alo-internet-resposta</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;Quem respondeu: &lt;a href='https://twitter.com/andlima'&gt;André Lima&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Felizmente para a Alô Telefonia e Internet, o problema de conectar todos os clientes usando o mínimo de cabo pode ser modelado como um problema clássico da área de grafos.&lt;/p&gt;
+
+&lt;p&gt;O problema questiona: dado um grafo (nós e arestas), qual a soma mínima do peso de arestas que permite ligar todos os nós do grafo.&lt;/p&gt;
+&lt;div class='center'&gt;
+    &lt;div class='pic inline'&gt;
+        &lt;img src='/imgs/alo-internet/classic-question.png' /&gt;
+        &lt;p&gt;Grafo original.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class='pic inline'&gt;
+        &lt;img src='/imgs/alo-internet/classic-answer.png' /&gt;
+        &lt;p&gt;Uma possivel solução.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Esse problema é conhecido como &lt;a href='http://en.wikipedia.org/wiki/Minimum_spanning_tree'&gt;Árvore Geradora Mínima&lt;/a&gt;, ou MST para os íntimos (de Minimum Spanning Tree).&lt;/p&gt;
+
+&lt;p&gt;Como o nome sugere, a primeira coisa que podemos inferir sobre a solução é que o grafo resultante é uma árvore, isto é, não poderá conter ciclos. Podemos garantir isso porque caso haja qualquer ciclo, a eliminação de uma das arestas não iria afetar a conectividade do grafo, e geraria uma resposta com soma de pesos menor.&lt;/p&gt;
+
+&lt;p&gt;Existem dois algoritmos clássicos para a solução deste problema. Um deles, conhecido como &lt;a href='http://en.wikipedia.org/wiki/Kruskal&amp;apos;s_algorithm'&gt;algoritmo de Kruskal&lt;/a&gt; foi implementado pelo leitor &lt;a href='https://twitter.com/#!/andlima'&gt;André Lima&lt;/a&gt;. A &lt;a href='https://gist.github.com/2816407'&gt;solução dele&lt;/a&gt; está bem concisa e vale ser estudada.&lt;/p&gt;
+
+&lt;p&gt;Irei apresentar aqui o outro algoritmo, conhecido como &lt;a href='http://en.wikipedia.org/wiki/Prim&amp;apos;s_algorithm'&gt;algoritmo de Prim&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;É um algoritmo guloso, que parte de um nó arbitrário e tenta sempre encontrar a menor aresta que alcance um novo nó, isto é, que não crie ciclos.&lt;/p&gt;
+
+&lt;p&gt;O algoritmo começa escolhendo um nó arbitrário.&lt;/p&gt;
+&lt;div class='center'&gt;
+    &lt;div class='pic inline'&gt;
+        &lt;img src='/imgs/alo-internet/prim-1.png' /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Então escolhemos a menor aresta que liga algum nó já escolhido a algum nó ainda não escolhido.&lt;/p&gt;
+&lt;div class='center'&gt;
+    &lt;div class='pic inline'&gt;
+        &lt;img src='/imgs/alo-internet/prim-2.png' /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Mesma coisa para o terceiro nó.&lt;/p&gt;
+&lt;div class='center'&gt;
+    &lt;div class='pic inline'&gt;
+        &lt;img src='/imgs/alo-internet/prim-3.png' /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;E o quarto. Perceba que foi escolhida a menor aresta (3).&lt;/p&gt;
+&lt;div class='center'&gt;
+    &lt;div class='pic inline'&gt;
+        &lt;img src='/imgs/alo-internet/prim-4.png' /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Ignoramos a próxima menor aresta (5), pois ela iria introduzir um ciclo se adicionada.&lt;/p&gt;
+&lt;div class='center'&gt;
+    &lt;div class='pic inline'&gt;
+        &lt;img src='/imgs/alo-internet/prim-5.png' /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Então escolhemos a quarta aresta (6) e o algoritmo termina, pois todos os nós foram alcançados.&lt;/p&gt;
+&lt;div class='center'&gt;
+    &lt;div class='pic inline'&gt;
+        &lt;img src='/imgs/alo-internet/prim-6.png' /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Esse algoritmo foi desenvolvido por &lt;a href='http://en.wikipedia.org/wiki/Robert_C._Prim'&gt;Robert Prim&lt;/a&gt;, e depois por &lt;a href='http://en.wikipedia.org/wiki/Edsger_Dijkstra'&gt;Edsger Dijkstra&lt;/a&gt;. É possível perceber grande semelhança entre esse algoritmo e o famoso &lt;a href='http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm'&gt;Dijkstra&amp;#8217;s Algorithm&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;O código é relativamente simples:&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='python'&gt;&lt;span class='c'&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+&lt;span class='kn'&gt;from&lt;/span&gt; &lt;span class='nn'&gt;math&lt;/span&gt; &lt;span class='kn'&gt;import&lt;/span&gt; &lt;span class='n'&gt;sqrt&lt;/span&gt;
+
+&lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;distancia&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;c1&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;c2&lt;/span&gt;&lt;span class='p'&gt;):&lt;/span&gt;
+    &lt;span class='k'&gt;return&lt;/span&gt; &lt;span class='n'&gt;sqrt&lt;/span&gt;&lt;span class='p'&gt;((&lt;/span&gt;&lt;span class='n'&gt;c1&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;c2&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;])&lt;/span&gt;&lt;span class='o'&gt;**&lt;/span&gt;&lt;span class='mi'&gt;2&lt;/span&gt; &lt;span class='o'&gt;+&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;c1&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;2&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='n'&gt;c2&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;2&lt;/span&gt;&lt;span class='p'&gt;])&lt;/span&gt;&lt;span class='o'&gt;**&lt;/span&gt;&lt;span class='mi'&gt;2&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+    
+&lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;):&lt;/span&gt;
+    &lt;span class='c'&gt;#grafo com todas as distâncias possíveis para todos os pares de clientes&lt;/span&gt;
+    &lt;span class='n'&gt;G&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='p'&gt;[[&lt;/span&gt;&lt;span class='n'&gt;distancia&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;a&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;&lt;span class='n'&gt;b&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='k'&gt;for&lt;/span&gt; &lt;span class='n'&gt;a&lt;/span&gt; &lt;span class='ow'&gt;in&lt;/span&gt; &lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='k'&gt;for&lt;/span&gt; &lt;span class='n'&gt;b&lt;/span&gt; &lt;span class='ow'&gt;in&lt;/span&gt; &lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt;
+    &lt;span class='n'&gt;n&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;len&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+
+    &lt;span class='n'&gt;visitado&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='bp'&gt;False&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='n'&gt;n&lt;/span&gt;
+    &lt;span class='n'&gt;pai&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;0&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='o'&gt;*&lt;/span&gt; &lt;span class='n'&gt;n&lt;/span&gt;
+
+    &lt;span class='c'&gt;#escolhido o nó de índice 0 como nó inicial&lt;/span&gt;
+    &lt;span class='n'&gt;opcoes&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;G&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;0&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt;
+    &lt;span class='n'&gt;visitado&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;0&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='bp'&gt;True&lt;/span&gt;
+    
+    &lt;span class='k'&gt;for&lt;/span&gt; &lt;span class='n'&gt;k&lt;/span&gt; &lt;span class='ow'&gt;in&lt;/span&gt; &lt;span class='nb'&gt;range&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;n&lt;/span&gt;&lt;span class='o'&gt;-&lt;/span&gt;&lt;span class='mi'&gt;1&lt;/span&gt;&lt;span class='p'&gt;):&lt;/span&gt;
+        &lt;span class='c'&gt;#encontra a menor opção de aresta (w) e vértice de destino (v)&lt;/span&gt;
+        &lt;span class='n'&gt;w&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt; &lt;span class='n'&gt;v&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='nb'&gt;min&lt;/span&gt;&lt;span class='p'&gt;([(&lt;/span&gt;&lt;span class='n'&gt;opcoes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;i&lt;/span&gt;&lt;span class='p'&gt;],&lt;/span&gt; &lt;span class='n'&gt;i&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='k'&gt;for&lt;/span&gt; &lt;span class='n'&gt;i&lt;/span&gt; &lt;span class='ow'&gt;in&lt;/span&gt; &lt;span class='nb'&gt;range&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;n&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt; &lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='ow'&gt;not&lt;/span&gt; &lt;span class='n'&gt;visitado&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;i&lt;/span&gt;&lt;span class='p'&gt;]])&lt;/span&gt;
+
+        &lt;span class='c'&gt;#avisa que um nó foi escolhido definitivamente&lt;/span&gt;
+        &lt;span class='k'&gt;yield&lt;/span&gt; &lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;pai&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;v&lt;/span&gt;&lt;span class='p'&gt;]][&lt;/span&gt;&lt;span class='mi'&gt;0&lt;/span&gt;&lt;span class='p'&gt;],&lt;/span&gt; &lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;v&lt;/span&gt;&lt;span class='p'&gt;][&lt;/span&gt;&lt;span class='mi'&gt;0&lt;/span&gt;&lt;span class='p'&gt;],&lt;/span&gt; &lt;span class='n'&gt;w&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;                
+
+        &lt;span class='c'&gt;#marca v como visitado e atualiza as menores opções&lt;/span&gt;
+        &lt;span class='n'&gt;visitado&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;v&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='bp'&gt;True&lt;/span&gt;
+        
+        &lt;span class='k'&gt;for&lt;/span&gt; &lt;span class='n'&gt;i&lt;/span&gt; &lt;span class='ow'&gt;in&lt;/span&gt; &lt;span class='nb'&gt;range&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;n&lt;/span&gt;&lt;span class='p'&gt;):&lt;/span&gt;
+            &lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='n'&gt;G&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;v&lt;/span&gt;&lt;span class='p'&gt;][&lt;/span&gt;&lt;span class='n'&gt;i&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='o'&gt;&amp;lt;&lt;/span&gt; &lt;span class='n'&gt;opcoes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;i&lt;/span&gt;&lt;span class='p'&gt;]:&lt;/span&gt;
+                &lt;span class='n'&gt;opcoes&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;i&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;G&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;v&lt;/span&gt;&lt;span class='p'&gt;][&lt;/span&gt;&lt;span class='n'&gt;i&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt;
+                &lt;span class='n'&gt;pai&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='n'&gt;i&lt;/span&gt;&lt;span class='p'&gt;]&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt; &lt;span class='n'&gt;v&lt;/span&gt;
+                
+&lt;span class='k'&gt;def&lt;/span&gt; &lt;span class='nf'&gt;soma_conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;):&lt;/span&gt;
+    &lt;span class='k'&gt;return&lt;/span&gt; &lt;span class='nb'&gt;reduce&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='k'&gt;lambda&lt;/span&gt; &lt;span class='n'&gt;x&lt;/span&gt;&lt;span class='p'&gt;,&lt;/span&gt;&lt;span class='n'&gt;y&lt;/span&gt;&lt;span class='p'&gt;:&lt;/span&gt; &lt;span class='n'&gt;x&lt;/span&gt;&lt;span class='o'&gt;+&lt;/span&gt;&lt;span class='n'&gt;y&lt;/span&gt;&lt;span class='p'&gt;[&lt;/span&gt;&lt;span class='mi'&gt;2&lt;/span&gt;&lt;span class='p'&gt;],&lt;/span&gt; &lt;span class='n'&gt;conexoes&lt;/span&gt;&lt;span class='p'&gt;(&lt;/span&gt;&lt;span class='n'&gt;clientes&lt;/span&gt;&lt;span class='p'&gt;),&lt;/span&gt; &lt;span class='mf'&gt;0.0&lt;/span&gt;&lt;span class='p'&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</content>
+ </entry>
  
  <entry>
    <title>Resposta: Project Euler &#35;1 (revisado)</title>

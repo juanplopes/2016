@@ -1,0 +1,283 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>This is 2016, not 2012. - Resposta: Alô Telefonia e Internet</title>
+    
+    <meta name="author" content="Juan Lopes">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/css/pygments.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/css/overrides.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <a href="https://github.com/juanplopes/2016"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/">This is 2016, not 2012.</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">Categories</a></li>
+      	
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">Archive</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">Tags</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+          <a href="http://feeds.feedburner.com/2016not2012" class="feed">&nbsp;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="content">
+        
+
+
+<div class="page-header">
+  <h1>Resposta: Alô Telefonia e Internet <small>oi?</small>
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p><em>Quem respondeu: <a href='https://twitter.com/andlima'>André Lima</a></em></p>
+
+<p>Felizmente para a Alô Telefonia e Internet, o problema de conectar todos os clientes usando o mínimo de cabo pode ser modelado como um problema clássico da área de grafos.</p>
+
+<p>O problema questiona: dado um grafo (nós e arestas), qual a soma mínima do peso de arestas que permite ligar todos os nós do grafo.</p>
+<div class='center'>
+    <div class='pic inline'>
+        <img src='/imgs/alo-internet/classic-question.png' />
+        <p>Grafo original.</p>
+    </div>
+
+    <div class='pic inline'>
+        <img src='/imgs/alo-internet/classic-answer.png' />
+        <p>Uma possivel solução.</p>
+    </div>
+</div>
+<p>Esse problema é conhecido como <a href='http://en.wikipedia.org/wiki/Minimum_spanning_tree'>Árvore Geradora Mínima</a>, ou MST para os íntimos (de Minimum Spanning Tree).</p>
+
+<p>Como o nome sugere, a primeira coisa que podemos inferir sobre a solução é que o grafo resultante é uma árvore, isto é, não poderá conter ciclos. Podemos garantir isso porque caso haja qualquer ciclo, a eliminação de uma das arestas não iria afetar a conectividade do grafo, e geraria uma resposta com soma de pesos menor.</p>
+
+<p>Existem dois algoritmos clássicos para a solução deste problema. Um deles, conhecido como <a href='http://en.wikipedia.org/wiki/Kruskal&apos;s_algorithm'>algoritmo de Kruskal</a> foi implementado pelo leitor <a href='https://twitter.com/#!/andlima'>André Lima</a>. A <a href='https://gist.github.com/2816407'>solução dele</a> está bem concisa e vale ser estudada.</p>
+
+<p>Irei apresentar aqui o outro algoritmo, conhecido como <a href='http://en.wikipedia.org/wiki/Prim&apos;s_algorithm'>algoritmo de Prim</a>.</p>
+
+<p>É um algoritmo guloso, que parte de um nó arbitrário e tenta sempre encontrar a menor aresta que alcance um novo nó, isto é, que não crie ciclos.</p>
+
+<p>O algoritmo começa escolhendo um nó arbitrário.</p>
+<div class='center'>
+    <div class='pic inline'>
+        <img src='/imgs/alo-internet/prim-1.png' />
+    </div>
+</div>
+<p>Então escolhemos a menor aresta que liga algum nó já escolhido a algum nó ainda não escolhido.</p>
+<div class='center'>
+    <div class='pic inline'>
+        <img src='/imgs/alo-internet/prim-2.png' />
+    </div>
+</div>
+<p>Mesma coisa para o terceiro nó.</p>
+<div class='center'>
+    <div class='pic inline'>
+        <img src='/imgs/alo-internet/prim-3.png' />
+    </div>
+</div>
+<p>E o quarto. Perceba que foi escolhida a menor aresta (3).</p>
+<div class='center'>
+    <div class='pic inline'>
+        <img src='/imgs/alo-internet/prim-4.png' />
+    </div>
+</div>
+<p>Ignoramos a próxima menor aresta (5), pois ela iria introduzir um ciclo se adicionada.</p>
+<div class='center'>
+    <div class='pic inline'>
+        <img src='/imgs/alo-internet/prim-5.png' />
+    </div>
+</div>
+<p>Então escolhemos a quarta aresta (6) e o algoritmo termina, pois todos os nós foram alcançados.</p>
+<div class='center'>
+    <div class='pic inline'>
+        <img src='/imgs/alo-internet/prim-6.png' />
+    </div>
+</div>
+<p>Esse algoritmo foi desenvolvido por <a href='http://en.wikipedia.org/wiki/Robert_C._Prim'>Robert Prim</a>, e depois por <a href='http://en.wikipedia.org/wiki/Edsger_Dijkstra'>Edsger Dijkstra</a>. É possível perceber grande semelhança entre esse algoritmo e o famoso <a href='http://en.wikipedia.org/wiki/Dijkstra%27s_algorithm'>Dijkstra&#8217;s Algorithm</a></p>
+
+<p>O código é relativamente simples:</p>
+<div class='highlight'><pre><code class='python'><span class='c'># -*- coding: utf-8 -*-</span>
+<span class='kn'>from</span> <span class='nn'>math</span> <span class='kn'>import</span> <span class='n'>sqrt</span>
+
+<span class='k'>def</span> <span class='nf'>distancia</span><span class='p'>(</span><span class='n'>c1</span><span class='p'>,</span> <span class='n'>c2</span><span class='p'>):</span>
+    <span class='k'>return</span> <span class='n'>sqrt</span><span class='p'>((</span><span class='n'>c1</span><span class='p'>[</span><span class='mi'>1</span><span class='p'>]</span><span class='o'>-</span><span class='n'>c2</span><span class='p'>[</span><span class='mi'>1</span><span class='p'>])</span><span class='o'>**</span><span class='mi'>2</span> <span class='o'>+</span> <span class='p'>(</span><span class='n'>c1</span><span class='p'>[</span><span class='mi'>2</span><span class='p'>]</span><span class='o'>-</span><span class='n'>c2</span><span class='p'>[</span><span class='mi'>2</span><span class='p'>])</span><span class='o'>**</span><span class='mi'>2</span><span class='p'>)</span>
+    
+<span class='k'>def</span> <span class='nf'>conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>):</span>
+    <span class='c'>#grafo com todas as distâncias possíveis para todos os pares de clientes</span>
+    <span class='n'>G</span> <span class='o'>=</span> <span class='p'>[[</span><span class='n'>distancia</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span><span class='n'>b</span><span class='p'>)</span> <span class='k'>for</span> <span class='n'>a</span> <span class='ow'>in</span> <span class='n'>clientes</span><span class='p'>]</span> <span class='k'>for</span> <span class='n'>b</span> <span class='ow'>in</span> <span class='n'>clientes</span><span class='p'>]</span>
+    <span class='n'>n</span> <span class='o'>=</span> <span class='nb'>len</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>)</span>
+
+    <span class='n'>visitado</span> <span class='o'>=</span> <span class='p'>[</span><span class='bp'>False</span><span class='p'>]</span> <span class='o'>*</span> <span class='n'>n</span>
+    <span class='n'>pai</span> <span class='o'>=</span> <span class='p'>[</span><span class='mi'>0</span><span class='p'>]</span> <span class='o'>*</span> <span class='n'>n</span>
+
+    <span class='c'>#escolhido o nó de índice 0 como nó inicial</span>
+    <span class='n'>opcoes</span> <span class='o'>=</span> <span class='n'>G</span><span class='p'>[</span><span class='mi'>0</span><span class='p'>]</span>
+    <span class='n'>visitado</span><span class='p'>[</span><span class='mi'>0</span><span class='p'>]</span> <span class='o'>=</span> <span class='bp'>True</span>
+    
+    <span class='k'>for</span> <span class='n'>k</span> <span class='ow'>in</span> <span class='nb'>range</span><span class='p'>(</span><span class='n'>n</span><span class='o'>-</span><span class='mi'>1</span><span class='p'>):</span>
+        <span class='c'>#encontra a menor opção de aresta (w) e vértice de destino (v)</span>
+        <span class='n'>w</span><span class='p'>,</span> <span class='n'>v</span> <span class='o'>=</span> <span class='nb'>min</span><span class='p'>([(</span><span class='n'>opcoes</span><span class='p'>[</span><span class='n'>i</span><span class='p'>],</span> <span class='n'>i</span><span class='p'>)</span> <span class='k'>for</span> <span class='n'>i</span> <span class='ow'>in</span> <span class='nb'>range</span><span class='p'>(</span><span class='n'>n</span><span class='p'>)</span> <span class='k'>if</span> <span class='ow'>not</span> <span class='n'>visitado</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]])</span>
+
+        <span class='c'>#avisa que um nó foi escolhido definitivamente</span>
+        <span class='k'>yield</span> <span class='p'>(</span><span class='n'>clientes</span><span class='p'>[</span><span class='n'>pai</span><span class='p'>[</span><span class='n'>v</span><span class='p'>]][</span><span class='mi'>0</span><span class='p'>],</span> <span class='n'>clientes</span><span class='p'>[</span><span class='n'>v</span><span class='p'>][</span><span class='mi'>0</span><span class='p'>],</span> <span class='n'>w</span><span class='p'>)</span>                
+
+        <span class='c'>#marca v como visitado e atualiza as menores opções</span>
+        <span class='n'>visitado</span><span class='p'>[</span><span class='n'>v</span><span class='p'>]</span> <span class='o'>=</span> <span class='bp'>True</span>
+        
+        <span class='k'>for</span> <span class='n'>i</span> <span class='ow'>in</span> <span class='nb'>range</span><span class='p'>(</span><span class='n'>n</span><span class='p'>):</span>
+            <span class='k'>if</span> <span class='n'>G</span><span class='p'>[</span><span class='n'>v</span><span class='p'>][</span><span class='n'>i</span><span class='p'>]</span> <span class='o'>&lt;</span> <span class='n'>opcoes</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]:</span>
+                <span class='n'>opcoes</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>G</span><span class='p'>[</span><span class='n'>v</span><span class='p'>][</span><span class='n'>i</span><span class='p'>]</span>
+                <span class='n'>pai</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>v</span>
+                
+<span class='k'>def</span> <span class='nf'>soma_conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>):</span>
+    <span class='k'>return</span> <span class='nb'>reduce</span><span class='p'>(</span><span class='k'>lambda</span> <span class='n'>x</span><span class='p'>,</span><span class='n'>y</span><span class='p'>:</span> <span class='n'>x</span><span class='o'>+</span><span class='n'>y</span><span class='p'>[</span><span class='mi'>2</span><span class='p'>],</span> <span class='n'>conexoes</span><span class='p'>(</span><span class='n'>clientes</span><span class='p'>),</span> <span class='mf'>0.0</span><span class='p'>)</span>
+</code></pre>
+</div>
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/project-euler-1-resposta" title="Resposta: Project Euler &#35;1 (revisado)">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next disabled"><a>Next &rarr;</a>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = '2016not2012'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+  </div>
+  
+  <div class="span4">
+    <h4>Published</h4>
+    <div class="date"><span>13 June 2012</span></div>
+
+  
+    <h4>Tags</h4>
+    <ul class="tag_box">
+    
+    
+
+
+  
+     
+    	<li><a href="/tags.html#answer-ref">answer <span>2</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+  </div>
+</div>
+
+      </div>
+
+      <footer>
+        <p>&copy; Juan Lopes 2012</p>
+        <p>
+            This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
+        </p>
+        <p>
+          Powered by <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    
+  </body>
+</html>
